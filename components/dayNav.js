@@ -1,17 +1,29 @@
-function planNav() {
+const dayNav = () => {
   return `
-    <div class="container-fluid ">
-            <a class="navbar-brand" href="#">
+    
+        <div class="container-fluid ">
+            <a class="navbar-brand freshly_logo" href="#">
                 <img class="freshly_logo" src="assets/Freshly__Logo.jpg" alt="">
+            </a>
+            <a class="navbar-brand back_freshly_logo" href="plan.html">
                 <img class="back_freshly_logo" src="assets/backIcon.png" alt="">
             </a>
+
             <div class="nav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Plans </a>
+                        <a class="nav-link  active showOnTop" aria-current="page" href="#">
+                            Choose A Delivery Day
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link previous" aria-current="page" href="plan.html">
+                            Plans
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">
+                        <a class="nav-link active" href="#">
                             <img src="assets/Arrows-Forward-icon.png" alt="">
                             &nbsp; Day </a>
                     </li>
@@ -50,6 +62,8 @@ function planNav() {
                     </ul>
                 </li>
             </ul>
-        </div>`;
-}
-export default planNav;
+        </div>
+    `;
+};
+
+export { dayNav };
