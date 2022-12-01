@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+}
+.main {
+  width: 100%;
+  height: auto;
+  padding-top: 5rem;
+  background: #fff9fc;
+}
+
+.first {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+h2 {
+  font-weight: 600;
+}
+
+form {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  outline: 0;
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid lightgray;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+label,
+.meals {
+  color: #357471;
+  font-weight: 600;
+}
+
+.next {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+}
+
+.promo,
+.cancle {
+  color: #2a6dff;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.promoDiv {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cancle {
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.totalAmount,
+.total {
+  font-size: 1.2rem;
+}
+.mealsDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mealsDetail img {
+  width: 6rem;
+  border-radius: 50%;
+}
+.mealsDetail label {
+  display: flex;
+  flex-direction: row;
+}
+
+.promoButtons {
+  gap: 0.5rem;
+}

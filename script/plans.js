@@ -18,3 +18,19 @@ adjustSupport();
 // plans.forEach((selectedplan) => {
 //   selectedplan.addEventListener("change", findSelected);
 // });
+
+let parent = document.querySelector("#parent");
+parent.addEventListener("click", dosomething, false);
+
+function dosomething(e) {
+  if (e.target !== e.currentTarget) {
+    let noOfMeals = parseInt(e.target.id);
+    let pricePerMeal = parseFloat(e.target.className);
+    console.log(noOfMeals, pricePerMeal);
+    // document.querySelector(".delivery_date").innerHTML = clickedItem;
+    // alert(pricePerMeal, noOfMeals);
+    localStorage.setItem("noOfMeals", noOfMeals);
+    localStorage.setItem("pricePerMeal", pricePerMeal);
+  }
+  e.stopPropagation();
+}

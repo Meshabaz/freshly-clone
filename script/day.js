@@ -14,7 +14,7 @@ function dosomething(e) {
   if (e.target !== e.currentTarget) {
     let clickedItem = e.target.id;
     document.querySelector(".delivery_date").innerHTML = clickedItem;
-    // alert(clickedItem);
+    alert(clickedItem);
     localStorage.setItem("delivery_date", clickedItem);
   }
   e.stopPropagation();
