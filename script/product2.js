@@ -1,6 +1,14 @@
 let allProducts = JSON.parse(localStorage.getItem("products")) || []
 console.log(allProducts)
 
+let mealQuantity = localStorage.getItem("noOfMeals") || 0
+let pricePerMeal = localStorage.getItem("pricePerMeal") || 0
+let date = localStorage.getItem("delivery_date") || ""
+
+console.log(mealQuantity)
+console.log(pricePerMeal)
+console.log(date)
+
 let data = async() => {
     url = `https://freshly-server.herokuapp.com/all`
     let res = await fetch(url)
@@ -250,7 +258,33 @@ function ShowinCart(arr,food){
         })
         let summary = document.createElement("h5")
         summary.innerText = "Order Summary"
-        document.getElementById("cart").append(summary)
+        summary.style.marginLeft = "25px"
+        let meal = document.createElement("p")
+        meal.innerText = cartArray.length + " meals"
+        mealAmount = document.createElement("p")
+        let amount = 0;
+        if(cartArray.length<mealQuantity){
+            amount = 12.50*cartArray.length
+        }
+        else amount = mealAmount
+        mealAmount.innerText = "$" + amount
+
+
+        let subtotal = document.createElement("p")
+        subtotal.innerText = "Subtotal"
+        let subAmount = document.createElement("p")
+        subAmount.innerText  = "$" + amount
+
+        let div1 = document.createElement("div")
+        div1.append(meal,mealAmount)
+        div1.setAttribute("id","meal1")
+
+        let div2 = document.createElement("div")
+        div2.append(subtotal,subAmount)
+        div2.setAttribute("id","meal2")
+
+        document.getElementById("cart").append(summary,div1,div2)
+
     }
     
     document.getElementById("subtotal").innerHTML = ""
@@ -258,21 +292,46 @@ function ShowinCart(arr,food){
     document.getElementById("addToCart").innerHTML = ""
     let sub = document.getElementById("subtotal")
     let h3 = document.createElement("h3")
-    h3.innerText = "Subtotal "
-    sub.append(h3)
+    let para = document.createElement("p")
+
+    if(cartArray.length<mealQuantity){
+        h3.innerText = "Subtotal: $" + (12.50*cartArray.length).toFixed(2)
+    }
+    else{
+        h3.innerHTML = "Subtotal: $" + (pricePerMeal*cartArray.length).toFixed(2)
+        let save = (12.50*cartArray.length) - (pricePerMeal*cartArray.length)
+        save = save.toFixed(2)
+        para.innerText = "You Saved: $"+ save
+        para.style.color = "Gray"
+        para.style.fontSize = "12px"
+        para.style.marginBottom = "-15px"
+    }
+    
+    sub.append(para,h3)
 
     let cIcon = document.createElement("h3")
     cIcon.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>'
 
     let quan = document.createElement("h3")
-    quan.innerText = 3
+    quan.innerText = cartArray.length
 
     document.getElementById("cart-quantity").append(cIcon,quan)
 
     var add = document.createElement("button")
     add.innerText = "Add to Continue"
+    if(cartArray.length>=mealQuantity){
+        add.style.background = "blue"
+        add.style.color = "white"
+        add.style.cursor = "pointer"
+        add.addEventListener("click",()=>{
+            location.href = "checkout.html"
+        })
+    }
     var par = document.createElement("p")
     par.innerText = "The more you add, the more you will save!"
+    par.style.color = "gray"
+    par.style.fontSize = "14px"
+    par.style.fontWeight= "bolder"
     
     document.getElementById("addToCart").append(add,par)
 }

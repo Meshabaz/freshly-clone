@@ -260,6 +260,7 @@ body{
     border-right: 2px solid rgb(224, 220, 220);
     position: relative;
     transition: 0.4s ease;
+    transform: matrix();
 }
 #sFilter{
     position:relative;
@@ -267,7 +268,32 @@ body{
     max-height: 85%;
     background-color: rgb(254, 253, 245);
     transition: 0.4s ease;
+    transform: matrix();
     
+}
+#meal1{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+#meal2{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: -10px;
+}
+#meal1 p{
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(118, 111, 111);
+}
+#meal2 p{
+    font-size: 14px;
+    font-weight: bolder;
 }
 #sort{
     cursor: pointer;
