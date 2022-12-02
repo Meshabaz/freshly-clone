@@ -10,7 +10,7 @@ console.log(pricePerMeal)
 console.log(date)
 
 let data = async() => {
-    url = `https://freshly-server.herokuapp.com/all`
+    url = `https://freshly-server.onrender.com/all`
     let res = await fetch(url)
     let food = await res.json()
     allProducts = food
@@ -266,7 +266,8 @@ function ShowinCart(arr,food){
         if(cartArray.length<mealQuantity){
             amount = 12.50*cartArray.length
         }
-        else amount = mealAmount
+        else amount = (pricePerMeal*cartArray.length).toFixed(2)
+
         mealAmount.innerText = "$" + amount
 
 
