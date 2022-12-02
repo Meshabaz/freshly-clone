@@ -133,8 +133,9 @@
                                             <input type="text" placeholder="Enter UPI ID here.." class="form-control"
                                                 id="exampleFormControlInput1">
                                         </div>
-                                        <button type="button" class="btn mt-3 btn-primary payment_Btn"
-                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                        <button type="button" class="pay btn mt-3 btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To
+                                            Payment</button>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +161,8 @@
                                         <p>You can pay via Cash or UPI enabled app at the time of delivery. Ask your
                                             delivery executive for these options.</p>
                                         <button type="button" class="btn mt-3 btn-primary payment_Btn"
-                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">Proceed To
+                                            Payment</button>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +176,49 @@
         </div>
     </div>
 
+    <!-- PROCEED TO PAYMENT -->
 
+    <div class="drop" style="display: none;">
+        <div class="phonepe">
+            <div class="p_header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Proceed To Payment</h1>
+                <button type="button" class="btn-close close_p" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="my-4">
+                <h4><strong>
+                        Scan & Pay via PhonePe
+                    </strong></h4>
+
+                <img src="assets/QR.jpeg" alt="">
+            </div>
+            <h4 class="or">OR</h4>
+            <div>
+                <h4><strong>
+                        Enter Your Mobile Number
+                    </strong></h4>
+                <input type="number" placeholder="0 0 0 0 0 - 0 0 0 0 0" class="form-control my-4" //
+                    id="exampleFormControlInput1">
+                <button class="next send_otp btn btn-primary">Send OTP</button>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="dropon" style="display: none;">
+        <div class="opt_div">
+            <div class="p_header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Fill The OTP</h1>
+                <button type="button" class="btn-close close_p" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="my-3">
+                <h4><strong>
+                        Enter The OTP Below
+                    </strong></h4>
+                <input type="password" placeholder="* * * *" class="otp form-control my-4"
+                    id="exampleFormControlInput1">
+                <button class="next verify_otp btn btn-primary">PAY $ <span class="topay"></span></button>
+            </div>
+        </div>
+    </div>
     <!-- DAY PAGE CONTENT -->
     <div class="main">
         <div class="container first">
@@ -357,6 +401,13 @@
 </body>
 
 <!-- SCRIPT DAY.JS -->
-<script src="script/checkout.js" type="module"></script>
+<script src="script/checkout.js" type="module" defer></script>
 
 </html>
+<!-- <script>
+    document.querySelector(".send_otp").addEventListener("click", send_otp);
+
+    function send_otp() {
+        alert("2000");
+    }
+</script> -->
