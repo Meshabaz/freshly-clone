@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <!-- STYLES BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- STYLES CHECKOUT.CSS -->
+    <link rel="stylesheet" href="styles/checkout.css">
+    <!-- STYLES CHECKOUTNAV.CSS -->
+    <link rel="stylesheet" href="styles/checkoutNav.css">
+    <!-- STYLES COMMON_QUESTIONS -->
+    <link rel="stylesheet" href="styles/common_questions.css">
+</head>
+
+<body>
+    <!-- IMPORTED DAY PAGE NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg bg-white"></nav>
+
+    <!-- PAYMENT GATEWAY -->
+    <!-- Scrollable modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Payment Gateway</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Choose a mode of payment</h4>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Pay using card
+                                    <img class="cardIcon" src="assets/card.png" alt="">
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <form>
+                                    <h5 class="mb-3">Payment Details</h4>
+                                        <label>Accepted Cards</label>
+                                        <div class="cards">
+                                            <img src="assets/rupay_card.png" alt="">
+                                            <img class="mastercard_card_Icon" src="assets/mastercard_card.png" alt="">
+                                            <img class="visa_card_Icon" src="assets/card.png" alt="">
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Card Number</label>
+                                            <input type="number" placeholder="Enter Card Number.." class="form-control"
+                                                id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Exp Month</label>
+                                            <input type="number" placeholder="Enter Exp Month.." class="form-control"
+                                                id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="name">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Exp
+                                                    Year</label>
+                                                <input type="number" placeholder="Enter Exp Year.." class="form-control"
+                                                    id="exampleFormControlInput1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">CVV</label>
+                                                <input type="number" placeholder="Enter Your CVV.." class="form-control"
+                                                    id="exampleFormControlInput1">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Card Holder
+                                                Name</label>
+                                            <input type="text" placeholder="Enter Card Holder Name.."
+                                                class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <button type="button" class="btn btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Pay using UPI
+                                    <img class="upiIcon" src="assets/upi.svg" alt="">
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h5 class="mb-3">Payment Details</h4>
+                                        <label>Available UPI Apps</label>
+                                        <div class="upis mt-4">
+                                            <div class="upi_option">
+                                                <input type="radio" id="ppay" name="radio">
+                                                <label for="ppay">
+                                                    <img src="assets/phone_pay.svg" alt="">
+                                                    <strong>Phone Pay</strong>
+                                                </label>
+                                            </div>
+                                            <div class="upi_option">
+                                                <input type="radio" name="radio" id="gpay">
+                                                <label for="gpay">
+                                                    <img for="gpay" src="assets/google-pay.png" alt="">
+                                                    <strong>Google Pay</strong></label>
+                                            </div>
+                                            <div class="upi_option">
+                                                <input type="radio" id="bpay" name="radio">
+                                                <label for="bpay">
+                                                    <img src="assets/bhim_pay.png" alt="">
+                                                    <strong>BHIM</strong>
+                                                </label>
+                                            </div>
+                                            <div class="upi_option">
+                                                <input type="radio" id="bpay" name="radio">
+                                                <label for="bpay">
+                                                    <img src="assets/paytm.png" alt="">
+                                                    <strong>Paytm</strong>
+                                                </label>
+                                            </div>
+                                            <input type="text" placeholder="Enter UPI ID here.." class="form-control"
+                                                id="exampleFormControlInput1">
+                                        </div>
+                                        <button type="button" class="btn mt-3 btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Cash On Delivery
+                                    <img class="codIcon" src="assets/cod.svg" alt="">
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h5 class="mb-3">Payment Details</h4>
+                                        <label>Captcha Code</label>
+                                        <div class="name captcha mt-4">
+                                            <img src="assets/captcha.png" alt="">
+                                            <label>change image</label>
+                                        </div>
+                                        <input type="number" placeholder="Enter the captcha code.."
+                                            class="form-control my-4" id="exampleFormControlInput1">
+                                        <p>You can pay via Cash or UPI enabled app at the time of delivery. Ask your
+                                            delivery executive for these options.</p>
+                                        <button type="button" class="btn mt-3 btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DAY PAGE CONTENT -->
+    <div class="main">
+        <div class="container first">
+            <div class="address">
+                <h2>Checkout</h2>
+                <form>
+                    <h4 class="mb-3">Delivery Address</h4>
+                    <div class="name">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Full Name for Delivery Address</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Address Line 1</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Address Line 2 (optional)</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="name">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">City</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">State</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>-----</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Zip</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Phone(optional)</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Receive SMS text message updates on my orders
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email (We require your email to send
+                            you receipts and order updates)</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <div class="name mb-5">
+                            <label for="">TOTAL</label>
+                            <strong class="totalPrice">PRICE</class=>
+                        </div>
+                        <button type="button" class="btn btn-primary next" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="summary">
+                <h2>Order Summary</h2>
+                <form>
+                    <p class="promo">+&nbsp; Add Promo</p>
+                    <div class="promoDiv mb-3">
+                        <input type="text" placeholder="Apply Promo Code.." class="form-control promoCode"
+                            id="exampleFormControlInput1">
+                        <div class="name promoButtons">
+                            <button class="apply btn btn-primary">APPLY</button>
+                            <button class="cancle">CANCLE</button>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Delivery Date</label>
+                        <select class="form-select date" aria-label="Default select example">
+                            <option value="Sunday, Dec 4">Sunday,&nbsp;Dec 4</option>
+                            <option value="Wednesday, Day 7">Wednesday,&nbsp; Dec 7</option>
+                            <option value="Thrusday Day 8">Thrusday,&nbsp; Dec 8</option>
+                            <option value="Friday, Day 9">Friday,&nbsp;Dec 9</option>
+                            <option value="Saturday, Day10">Saturday,&nbsp; Dec 10</option>
+                            <option value="Sunday, Day 11">Sunday,&nbsp; Dec 11</option>
+                            <option value="Monday, Day 12">Monday, Dec 12</option>
+                            <option value="Wednesday, Day 14">Wednesday,&nbsp; Dec 14</option>
+                            <option value="Thrusday, Day 15">Thrusday,&nbsp; Dec 15</option>
+                            <option value="Friday, Day 16">Friday,&nbsp;Dec 16</option>
+                            <option value="Saturday, Dec17">Saturday,&nbsp;Dec 17</option>
+                            <option value="Sunday, Dec18">Sunday,&nbsp;Dec 18</option>
+                            <option value="Monday, Day 19">Monday,&nbsp;Dec 19</option>
+                            <option value="Wednesday, Day 21">Wednesday,&nbsp;Dec 21</option>
+                            <option value="Thrusday, Dec 22">Thrusday,&nbsp;Dec 22</option>
+                            <option value="Friday, Day 23">Friday,&nbsp;Dec 23</option>
+
+
+                        </select>
+                        <hr>
+                        <div class="name">
+                            <label for="" class="noOfMeals">
+                                <span class="meals">4</span> Meals</label>
+                            <strong class="noOfMealsAmount">50</strong>
+                        </div>
+                        <hr>
+                        <div class="name">
+                            <label for="" class="shipping">Shipping</label>
+                            <strong class="shippingAmount"> 9.99</strong>
+                        </div>
+                        <hr>
+                        <div class="name">
+                            <label for="" class="total">TOTAL</label>
+                            <strong class="totalAmount"></strong>
+                        </div>
+                    </div>
+                </form>
+                <hr>
+                <div class="mealsDetail my-4">
+                    <label>x<h5><strong class="mealsCount">4</strong></h5></label>
+                    <img src="https://res.cloudinary.com/freshly/image/upload/c_fill,dpr_2,f_auto,h_383,w_580/v1637012874/production-meal-image-6b3a83c1-9167-4a16-897e-d12f9460236a.jpg"
+                        alt="">
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="container my-4 comman_questions" id="accordionFlushExample"></div>
+
+
+
+
+    </div>
+
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
+
+<!-- SCRIPT DAY.JS -->
+<script src="script/checkout.js" type="module"></script>
+
+</html>
