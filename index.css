@@ -32,7 +32,9 @@ body{
 
 
 /* NAVBAR SECTION  */
-
+.second_side{
+    font-weight: bolder;
+}
 nav{
     /* height: 65px; */
     margin-bottom: 10px;
