@@ -1,3 +1,44 @@
+document.querySelector("form").addEventListener("submit", submitData);
+
+var userData = JSON.parse(localStorage.getItem("UserData")) || []
+
+function submitData(event) {
+    event.preventDefault();
+    var email = document.querySelector("#email").value
+    var zip = document.querySelector("#code").value
+
+    var obj = {
+        Email: email,
+        Zip: zip,
+     
+    }
+    userData.push(obj);
+    localStorage.setItem("UserData", JSON.stringify(userData))
+    alert("Order Can be deliver to your Location");
+}
+
+document.querySelector("#form").addEventListener("submit", storeData)
+
+function storeData(event) {
+    event.preventDefault();
+    var email = document.querySelector("#mail").value
+    var zip = document.querySelector("#zip").value
+
+    var obj = {
+        Email: email,
+        Zip: zip,
+       
+    }
+    userData.push(obj);
+    console.log(obj);
+    localStorage.setItem("UserData", JSON.stringify(userData))
+    alert("Order Can be deliver to your Location");
+}
+
+
+
+// navbar dropdown
+
 dropdown = document.querySelector(".dropdown");
 second_side = document.querySelector(".second_side")
 last_side = document.querySelector(".last_side")
