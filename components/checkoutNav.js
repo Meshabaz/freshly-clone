@@ -2,10 +2,10 @@ const checkoutNav = () => {
   return `
     
         <div class="container-fluid ">
-            <a class="navbar-brand freshly_logo" href="#">
+            <a class="navbar-brand freshly_logo" href="index.html">
                 <img class="freshly_logo" src="assets/Freshly__Logo.jpg" alt="">
             </a>
-            <a class="navbar-brand back_freshly_logo" href="plan.html">
+            <a class="navbar-brand back_freshly_logo" href="product2.html">
                 <img class="back_freshly_logo" src="assets/backIcon.png" alt="">
             </a>
 
@@ -28,7 +28,7 @@ const checkoutNav = () => {
                              Day &nbsp; </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link previous">
+                        <a class="nav-link previous" href="product2.html">
                             <img src="assets/Arrows-Forward-icon.png" alt="">
                             Meals  &nbsp;</a>
                     </li>

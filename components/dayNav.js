@@ -2,7 +2,7 @@ const dayNav = () => {
   return `
     
         <div class="container-fluid ">
-            <a class="navbar-brand freshly_logo" href="#">
+            <a class="navbar-brand freshly_logo" href="index.html">
                 <img class="freshly_logo" src="assets/Freshly__Logo.jpg" alt="">
             </a>
             <a class="navbar-brand back_freshly_logo" href="plan.html">
