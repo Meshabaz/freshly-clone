@@ -382,12 +382,12 @@ let isFilter = false
 function openSort(){
     if(!isFilter){
         document.getElementById("sFilter").removeAttribute("hidden")
-        document.getElementById("container").style.gridTemplateColumns = "4fr 17.9fr 6fr"
+        document.getElementById("container").style.gridTemplateColumns = "4fr 17.4fr 6fr"
         isFilter = true
     }
     else{
         document.getElementById("sFilter").setAttribute("hidden","hidden")
-        document.getElementById("container").style.gridTemplateColumns = "0fr 11fr 3fr"
+        document.getElementById("container").style.gridTemplateColumns = "0fr 10.7fr 3fr"
         isFilter = false
     }
     

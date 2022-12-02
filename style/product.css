@@ -38,7 +38,7 @@
 
 #container{
     display: grid;
-    grid-template-columns: 0fr 11fr 3fr;
+    grid-template-columns: 0fr 10.7fr 3fr;
     height: 100%;
     position: absolute;
 }
@@ -70,6 +70,7 @@
     gap: 18px;
     margin-top: 15px;
     width: 98%;
+    
 }
 #products>div{
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -214,7 +215,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    border: 2px solid rgb(200, 198, 198);
+    border: 2px solid rgb(208, 208, 208);
     border-radius: 22px;
     padding: 0 20px;
     height: 40px;
@@ -226,6 +227,7 @@ body{
 }
 #cart-section{
     align-items: center;
+    border-left: 1px solid rgb(185, 185, 185);
 }
 
 #sub-cart{
