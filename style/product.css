@@ -1,0 +1,320 @@
+
+
+#first-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    border-right: 1px solid rgb(194, 192, 192);
+    padding: 0 20px;
+}
+#first-top a{
+    color:rgb(54, 91, 240)
+}
+#topbar{
+    display: grid;
+    grid-template-columns: 11fr 3fr;
+}
+#second-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    border-top: 1px solid rgb(231, 231, 231);
+    border-right: 1px solid rgb(203, 203, 203);
+    padding: 0 20px;
+    background-color: rgb(254, 253, 245);
+    /* margin: -7px 0; */
+}
+#question-mark{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 0fr 11fr 3fr;
+    height: 100%;
+    position: absolute;
+}
+/* grid-template-columns: 4fr 14fr 5fr; */
+#delivery-date{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+#main{
+    background-color: rgb(254, 253, 245);
+    /* position: absolute; */
+    overflow-y: scroll;
+    max-height: 82%;
+    width: 99.5%;
+}
+
+#products{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-evenly;
+    gap: 18px;
+    margin-top: 15px;
+    width: 98%;
+}
+#products>div{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    height: 400px;
+    position: relative;
+    
+}
+#foodImg{
+    overflow: hidden;
+    position:relative;
+    border-radius: 20px 20px 0 0;
+    margin: 0px;
+}
+#foodImg>img:hover{
+    transform: scale(1.1);
+}
+#foodImg>img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.5s;
+    background-size: cover;
+    
+}
+
+#products>div>h4,p{
+    padding-left: 12px;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.btn1{
+    border: none;
+    background-color:white;
+    border-radius: 25px 0 0 25px;
+    padding: 11px;
+    padding-right: 13px;
+    cursor: pointer;
+}
+.btn2{
+    border: none;
+    background-color:white;
+    border-radius: 0 25px 25px 0;
+    margin: 0px;
+    margin-left: 10px;
+    padding: 11px;
+    padding-left: 13px;
+    cursor: pointer;
+}
+.btn1:hover,.btn2:hover{
+    background-color: aliceblue;
+}
+
+.btn{
+    padding: 10px 13px;
+    border: none;
+    border-radius: 23px;
+    background-color: rgb(87, 87, 253);
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(55, 55, 244);
+}
+
+.btnDiv{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius:  25px;
+    align-items: center;
+    height: 40px;
+}
+
+/* Cart Css */
+
+.cartBtn{
+    display: grid;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.oneItem{
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    transition: all;
+    padding: 12px 0;
+    cursor: pointer;
+    /* gap: 20px; */
+}
+.oneItem:hover{
+    background-color: aliceblue;
+}
+.oneItem:hover button{
+    background-color: aliceblue;
+    
+}
+
+.cartImg{
+    /* overflow: hidden;
+    position: relative; */
+    margin: auto;
+}
+.cartImg>img{
+    width: 110px;
+    clip-path: inset(10px 19px 7px 19px round 10px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.oneItem button{
+    background-color: white;
+    border:none;
+    margin: 10px 0;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+#cart{
+    position: relative;
+    overflow-y: auto;
+    max-height: 450px;
+    height: 450px;
+
+}
+#amount{
+    border-radius: 25px 25px 0 0;
+    border-top: 2px solid rgb(225, 225, 225);
+}
+body{
+    overflow-y: hidden;
+}
+#cart-quantity{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 2px solid rgb(200, 198, 198);
+    border-radius: 22px;
+    padding: 0 20px;
+    height: 40px;
+    justify-content:center;
+    margin-top: 6px;
+}
+#cart-quantity h3{
+    margin:auto;
+}
+#cart-section{
+    align-items: center;
+}
+
+#sub-cart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+
+}
+#addToCart{
+    width: 95%;
+    margin: auto;
+    display: grid;
+}
+#addToCart button{
+    border: none;
+    padding: 11px;
+    font-size: 17px;
+    color: rgb(189, 189, 189);
+    font-weight: bolder;
+}
+
+#category{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: -20px;
+}
+#filter{
+    /* position: relative; */
+    border-right: 2px solid rgb(224, 220, 220);
+    position: relative;
+    transition: 0.4s ease;
+}
+#sFilter{
+    position:relative;
+    overflow-y: scroll;
+    max-height: 85%;
+    background-color: rgb(254, 253, 245);
+    transition: 0.4s ease;
+    
+}
+#sort{
+    cursor: pointer;
+}
+.hover:hover{
+    background-color: aliceblue;
+}
+/* Media Query */
+@media (min-width:901px) and (max-width:1300px) {
+    #products{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-evenly;
+        gap: 18px;
+        margin-top: 15px;
+        width: 98%;
+    }
+  }
+  @media (min-width:651px) and (max-width:900px) {
+    #products{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-evenly;
+        gap: 18px;
+        margin-top: 15px;
+        width: 98%;
+    }
+  }
+  @media (min-width:550px) and (max-width:650px) {
+    #products{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-evenly;
+        gap: 18px;
+        margin-top: 15px;
+        width: 80%;
+    }
+  }
+ /* #inner-container{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: fixed;
+    left:center;
+    
+    background-color: white;
+ } */
