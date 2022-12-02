@@ -21,12 +21,166 @@
     <!-- IMPORTED DAY PAGE NAVBAR -->
     <nav class="navbar sticky-top navbar-expand-lg bg-white"></nav>
 
+    <!-- PAYMENT GATEWAY -->
+    <!-- Scrollable modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Payment Gateway</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Choose a mode of payment</h4>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Pay using card
+                                    <img class="cardIcon" src="assets/card.png" alt="">
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <form>
+                                    <h5 class="mb-3">Payment Details</h4>
+                                        <label>Accepted Cards</label>
+                                        <div class="cards">
+                                            <img src="assets/rupay_card.png" alt="">
+                                            <img class="mastercard_card_Icon" src="assets/mastercard_card.png" alt="">
+                                            <img class="visa_card_Icon" src="assets/card.png" alt="">
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Card Number</label>
+                                            <input type="number" placeholder="Enter Card Number.." class="form-control"
+                                                id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Exp Month</label>
+                                            <input type="number" placeholder="Enter Exp Month.." class="form-control"
+                                                id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="name">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Exp
+                                                    Year</label>
+                                                <input type="number" placeholder="Enter Exp Year.." class="form-control"
+                                                    id="exampleFormControlInput1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">CVV</label>
+                                                <input type="number" placeholder="Enter Your CVV.." class="form-control"
+                                                    id="exampleFormControlInput1">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Card Holder
+                                                Name</label>
+                                            <input type="text" placeholder="Enter Card Holder Name.."
+                                                class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <button type="button" class="btn btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Pay using UPI
+                                    <img class="upiIcon" src="assets/upi.svg" alt="">
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h5 class="mb-3">Payment Details</h4>
+                                        <label>Available UPI Apps</label>
+                                        <div class="upis mt-4">
+                                            <div class="upi_option">
+                                                <input type="radio" id="ppay" name="radio">
+                                                <label for="ppay">
+                                                    <img src="assets/phone_pay.svg" alt="">
+                                                    <strong>Phone Pay</strong>
+                                                </label>
+                                            </div>
+                                            <div class="upi_option">
+                                                <input type="radio" name="radio" id="gpay">
+                                                <label for="gpay">
+                                                    <img for="gpay" src="assets/google-pay.png" alt="">
+                                                    <strong>Google Pay</strong></label>
+                                            </div>
+                                            <div class="upi_option">
+                                                <input type="radio" id="bpay" name="radio">
+                                                <label for="bpay">
+                                                    <img src="assets/bhim_pay.png" alt="">
+                                                    <strong>BHIM</strong>
+                                                </label>
+                                            </div>
+                                            <div class="upi_option">
+                                                <input type="radio" id="bpay" name="radio">
+                                                <label for="bpay">
+                                                    <img src="assets/paytm.png" alt="">
+                                                    <strong>Paytm</strong>
+                                                </label>
+                                            </div>
+                                            <input type="text" placeholder="Enter UPI ID here.." class="form-control"
+                                                id="exampleFormControlInput1">
+                                        </div>
+                                        <button type="button" class="btn mt-3 btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Cash On Delivery
+                                    <img class="codIcon" src="assets/cod.svg" alt="">
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h5 class="mb-3">Payment Details</h4>
+                                        <label>Captcha Code</label>
+                                        <div class="name captcha mt-4">
+                                            <img src="assets/captcha.png" alt="">
+                                            <label>change image</label>
+                                        </div>
+                                        <input type="number" placeholder="Enter the captcha code.."
+                                            class="form-control my-4" id="exampleFormControlInput1">
+                                        <p>You can pay via Cash or UPI enabled app at the time of delivery. Ask your
+                                            delivery executive for these options.</p>
+                                        <button type="button" class="btn mt-3 btn-primary payment_Btn"
+                                            data-bs-dismiss="modal">Proceed To Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- DAY PAGE CONTENT -->
     <div class="main">
         <div class="container first">
             <div class="address">
                 <h2>Checkout</h2>
-                <form action="submit">
+                <form>
                     <h4 class="mb-3">Delivery Address</h4>
                     <div class="name">
                         <div class="mb-3">
@@ -116,9 +270,10 @@
                     <div class="mb-3">
                         <div class="name mb-5">
                             <label for="">TOTAL</label>
-                            <strong class="totalPrice">PRICE
+                            <strong class="totalPrice">PRICE</class=>
                         </div>
-                        <button class="btn btn-primary next">Next</button>
+                        <button type="button" class="btn btn-primary next" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Next</button>
                     </div>
                 </form>
             </div>
@@ -177,7 +332,7 @@
                 </form>
                 <hr>
                 <div class="mealsDetail my-4">
-                    <label>X&nbsp;<h5><strong>4</strong></h5></label>
+                    <label>x<h5><strong class="mealsCount">4</strong></h5></label>
                     <img src="https://res.cloudinary.com/freshly/image/upload/c_fill,dpr_2,f_auto,h_383,w_580/v1637012874/production-meal-image-6b3a83c1-9167-4a16-897e-d12f9460236a.jpg"
                         alt="">
                 </div>
@@ -186,6 +341,10 @@
         </div>
 
         <div class="container my-4 comman_questions" id="accordionFlushExample"></div>
+
+
+
+
     </div>
 
     <!-- SCRIPT BOOTSTRAP -->

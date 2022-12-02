@@ -13,11 +13,17 @@
 
 .first {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly; */
   gap: 2rem;
 }
+
+/* .summary {
+  border: 2px solid red;
+} */
 
 .name {
   width: 100%;
@@ -25,7 +31,8 @@
   flex-direction: row;
   justify-content: space-between;
 }
-h2 {
+h2,
+.modal-title {
   font-weight: 600;
 }
 
@@ -47,9 +54,23 @@ form {
 }
 
 label,
-.meals {
+.meals,
+.accordion-button {
   color: #357471;
   font-weight: 600;
+  gap: 2rem;
+}
+/* .accordion-button img {
+  width: 1.5rem;
+} */
+.cardIcon {
+  width: 2rem;
+}
+.upiIcon {
+  width: 3rem;
+}
+.codIcon {
+  width: 2.3rem;
 }
 
 .next {
@@ -96,8 +117,65 @@ label,
 .mealsDetail label {
   display: flex;
   flex-direction: row;
+  gap: 3px;
 }
 
 .promoButtons {
   gap: 0.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .first {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 5px;
+}
+.cards img {
+  width: 3.5rem;
+}
+
+.cards .mastercard_card_Icon {
+  height: 2rem;
+  margin-top: 0.7rem;
+}
+
+.payment_Btn {
+  width: 100%;
+  padding: 0.8rem;
+}
+
+.upis {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.upi_option {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.upi_option label {
+  display: flex;
+  gap: 1rem;
+}
+.upi_option button {
+  width: 2rem;
+}
+.upi_option img {
+  width: 2rem;
+}
+
+.captcha {
+  align-items: center;
+}
+.captcha img {
+  border: 1px solid lightgray;
 }

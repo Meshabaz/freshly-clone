@@ -36,7 +36,9 @@ document.querySelector(".date").addEventListener("click", () => {
 const display = () => {
   let shippingCharge = document.querySelector(".shippingAmount").innerText;
   let totalamount = document.querySelector(".totalAmount");
+  let totalprice = document.querySelector(".totalPrice");
 
+  document.querySelector(".mealsCount").innerText = TotalnoOfMeals;
   document.querySelector(".meals").innerText = TotalnoOfMeals;
   document.querySelector(".noOfMealsAmount").innerText = `$${pricePerMeal}-/`;
   let data =
@@ -47,6 +49,7 @@ const display = () => {
   data = Number(data.toFixed(2));
   console.log("data", data, flag);
   totalamount.innerHTML = `$${data}`;
+  totalprice.innerHTML = `$${data}`;
   document.querySelector(".date").value = localStorage.getItem("delivery_date");
 };
 
