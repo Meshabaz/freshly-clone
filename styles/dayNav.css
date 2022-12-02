@@ -1,0 +1,84 @@
+.freshly_logo {
+  width: 8rem;
+  overflow: hidden;
+}
+
+.questionMark_Logo,
+.customer_support_dropdown_item_image {
+  width: 2rem;
+}
+
+.back_freshly_logo {
+  display: none;
+}
+
+.customer_support_text,
+.customer_support_dropdown_item_text {
+  color: #2a6dff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.customer_support_dropdown {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+}
+
+.customer_support_dropdown_item {
+  width: 10.5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.first_option {
+  margin-bottom: 1rem;
+}
+
+.showOnTop {
+  display: none;
+}
+
+.previous {
+  color: #2a6dff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* ===============> LARGE DEVICES <================= */
+@media screen and (max-width: 1040px) {
+  .disabled,
+  .active,
+  .previous {
+    display: none;
+  }
+  .showOnTop {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+/* ===============> MEDIUM DEVICES <================= */
+@media screen and (max-width: 770px) {
+  .back_freshly_logo {
+    display: block;
+    width: 1.3rem;
+  }
+  .freshly_logo {
+    display: none;
+  }
+}
+
+/* ===============> SMALL DEVICES <================= */
+@media screen and (max-width: 570px) {
+  .customer_support_text {
+    display: none;
+  }
+}

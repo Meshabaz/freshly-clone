@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="./style/product.css">
+</head>
+<body>
+    
+    <div id="topbar">
+        <div>
+            <div id="first-top">
+                <h4><a href=""> <i class="fa-solid fa-chevron-left"></i> Back</a></h4>
+                <h4>Date</h4>
+                <h4><a href=""><i id="question-mark" class="fa-regular fa-circle-question"></i>Customer Support</a></h4>
+            </div>
+            <div id="second-top">
+                <h5>Choose Meals</h5>
+                <h5 id="sort" style="color: rgb(54, 91, 240);">Sort & Filter</h5>
+            </div>
+        </div>
+        
+        <div id="delivery-date">
+            <p>My Deliver For: <span>Monday</span></p>
+            <h4 id="clearAll" style="color: rgb(54, 91, 240);text-decoration:underline;cursor: pointer;">Clear All</h4>
+        </div>
+    </div>
+    <!-- <button><i class="fa-solid fa-plus"></i></button> -->
+    <div id="container">
+        <div id="filter">
+            <div id="sFilter">
+                <h3>Filter by:</h3>
+                <p>Diet <span style="color: rgb(176, 169, 169);">(Select one or more)</span></p>
+                <p class="hover"><input type="checkbox" name="" id="filter1" value="Gluten Free" onchange="filter1()">  Gluten Free</p>
+                <p class="hover"><input type="checkbox" name="" id="filter2" value="Carb Concious" onchange="filter1()">  Carb Conscious</p>
+                <p class="hover"><input type="checkbox" name="" id="filter3" value="Plant-Based" onchange="filter1()">  Plant-Based</p>
+                <p class="hover"><input type="checkbox" name="" id="filter4" value="Dairy-Free" onchange="filter1()">  Dairy-Free</p>
+                <br>
+                <h4>Categories</h4>
+                <div id="category" class="hover">
+                    <input type="radio" name="" id="filter5" value="Default" onchange="filter2()">
+                    <img src="https://res.cloudinary.com/freshly/image/upload/w_22,h_26/v1617112144/full-menu_3x_tjseuc.png" alt="" width="22px" height="26">
+                    <p>Full Menu</p>
+                </div>
+                <div id="category" class="hover">
+                    <input type="radio" name="" id="filter6" value="Purely Plant" onchange="filter3()">
+                    <img style="background-color: rgb(219, 204, 161)" src="https://res.cloudinary.com/freshly/image/upload/v1626368012/production-weekly-menu-section-image-df7515f7-9745-497e-80f7-035d653ccaff.png" alt="" width="22px" height="26">
+                    <p>Purely Plant</p>
+                </div>
+                
+                <div id="category" class="hover">
+                    <input type="radio" name="" id="filter7" value="Signature Collection" onchange="filter4()">
+                    <img style="background-color: green" src="https://res.cloudinary.com/freshly/image/upload/v1610576008/production-weekly-menu-section-image-cfe122a2-0a30-4276-af7e-87034e316e3e.png" alt="" width="22px" height="26">
+                    <p>Signature Collection</p>
+                </div>
+                <div id="category" class="hover">
+                    <input type="radio" name="" id="filter8" value="Freshly Fit" onchange="filter5()">
+                    <img style= "background-color: rgb(220, 242, 25)" src="https://res.cloudinary.com/freshly/image/upload/v1610576009/production-weekly-menu-section-image-8dbbc60a-71ff-422b-bbbd-2f5f39723f52.png" alt="" width="22px" height="26">
+                    <p>FreshlyFit</p>
+                </div>
+                <div id="category" class="hover">
+                    <input type="radio" name="" id="filter9" value="Proteins & Sides" onchange="filter6()">
+                    <img style= "background-color: rgb(155, 44, 105)" src="https://res.cloudinary.com/freshly/image/upload/v1617663486/production-weekly-menu-section-image-96c9cd78-c10d-493f-81f6-72f856ceed18.png" alt="" width="22px" height="26">
+                    <p>Proteins & Sides</p>
+                </div>
+                <br>
+
+                <h3>Sort By</h3>
+
+                <p>Nutritional macros</p>
+                <p class="hover"><input type="radio" name="" id="filter10" value="Default" onchange="filter7()">  Default</p>
+                <p class="hover"><input type="radio" name="" id="filter11" value="Calories" onchange="filter8()">  Calories</p>
+                <p class="hover"><input type="radio" name="" id="filter12" value="Carbs" onchange="filter9()">  Carbs</p>
+                <p class="hover"><input type="radio" name="" id="filter13" value="Protein" onchange="filter10()">  Protein</p>
+
+            </div>
+        </div>
+        
+        <div id="main">
+            <div id="inner-container">
+            
+            </div>
+            <div id="products">
+                
+            </div>
+        </div>
+        <div id="cart-section">
+            <div id="cart"></div>
+            <div id = "amount">
+                <div id="sub-cart">
+                    <div id="subtotal">
+                    </div>
+                    <div id="cart-quantity">
+
+                    </div>
+                </div>
+                <div id="addToCart">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script src="./script/product2.js"></script>
+<script src="https://kit.fontawesome.com/0ed43cb816.js" crossorigin="anonymous"></script>

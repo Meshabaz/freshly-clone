@@ -1,0 +1,24 @@
+.comman_questions {
+  text-align: center;
+  background: #fff9fc;
+}
+
+.comman_questions h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.accordion {
+  border: none;
+  padding: 2rem;
+}
+
+.accordion-body p {
+  font-size: 1.2rem;
+}
+.accordion-item h2:hover {
+  color: #0d6efd;
+}
+/* 
+.accordion-item {
+} */
