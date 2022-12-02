@@ -14,7 +14,7 @@ let data = async() => {
     let res = await fetch(url)
     let food = await res.json()
     allProducts = food
-    console.log(food)
+    // console.log(food)
     display(food)
 }
 
@@ -335,6 +335,7 @@ function ShowinCart(arr,food){
     
     document.getElementById("addToCart").append(add,par)
 }
+
 ShowinCart(cartArray)
 
 
