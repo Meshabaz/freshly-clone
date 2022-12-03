@@ -168,3 +168,11 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
     document.querySelector(".otp").value = "";
   }
 });
+
+// document.querySelector(".close_p").addEventListener("click", () => {
+//   document.querySelector(".dropon").classList.remove("puff-in-center");
+//   document.querySelector(".dropon").classList.add("slide-out-elliptic-top-bck");
+//   setTimeout(() => {
+//     document.querySelector(".dropon").style.display = "none";
+//   }, 800);
+// });
