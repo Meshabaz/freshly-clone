@@ -4,10 +4,17 @@ console.log(allProducts)
 let mealQuantity = localStorage.getItem("noOfMeals") || 0
 let pricePerMeal = localStorage.getItem("pricePerMeal") || 0
 let date = localStorage.getItem("delivery_date") || ""
+let before = date.substring(0,date.indexOf(','));
+
+document.getElementById("date").innerHTML = date
+document.querySelector(".date").innerHTML = before
+document.querySelector(".date").style.fontWeight = "bold"
 
 console.log(mealQuantity)
 console.log(pricePerMeal)
 console.log(date)
+
+
 
 let data = async() => {
     url = `https://freshly-server.onrender.com/all`
@@ -32,7 +39,7 @@ let display = (food) =>{
 
         let pImg = document.createElement("img")
         if(elem.brand === "Coq Au Vin") pImg.src = food[4].pic.url1
-        else pImg.src = elem.pic.url1
+        else pImg.src = elem.pic.url1 
 
         let title = document.createElement("h4")
         title.innerText = elem.brand
@@ -293,6 +300,7 @@ function ShowinCart(arr,food){
     document.getElementById("addToCart").innerHTML = ""
     let sub = document.getElementById("subtotal")
     let h3 = document.createElement("h3")
+    h3.setAttribute("id","subtotal")
     let para = document.createElement("p")
 
     if(cartArray.length<mealQuantity){
@@ -325,6 +333,20 @@ function ShowinCart(arr,food){
         add.style.color = "white"
         add.style.cursor = "pointer"
         add.addEventListener("click",()=>{
+            let array1 = []
+            allProducts.map((elem)=>{
+                if(elem.quantity>0){
+                    array1.push(elem)
+                }
+            })
+            // console.log(array1)
+            let sTotal = (pricePerMeal*cartArray.length).toFixed(2)
+            let d = (12.50*cartArray.length) - (pricePerMeal*cartArray.length)
+            d = d.toFixed(2)
+            localStorage.setItem("discount",d)
+            localStorage.setItem("subtotal",sTotal)
+            localStorage.setItem("itemToBuy",JSON.stringify(array1))
+                
             location.href = "checkout.html"
         })
     }
