@@ -359,7 +359,7 @@ function ShowinCart(arr,food){
     document.getElementById("addToCart").append(add,par)
 }
 
-ShowinCart(cartArray)
+
 
 
 function updateQuantity(elem){
@@ -373,6 +373,7 @@ function updateQuantity(elem){
         }
     }
 }
+ShowinCart(cartArray)
 function updateQuantity2(elem){
     for(var i=0;i<allProducts.length;i++){
         if(elem.brand === allProducts[i].brand){
