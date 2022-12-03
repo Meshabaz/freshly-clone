@@ -37,6 +37,7 @@ const display = () => {
   let shippingCharge = document.querySelector(".shippingAmount").innerText;
   let totalamount = document.querySelector(".totalAmount");
   let totalprice = document.querySelector(".totalPrice");
+  let topay = document.querySelector(".topay");
 
   document.querySelector(".mealsCount").innerText = TotalnoOfMeals;
   document.querySelector(".meals").innerText = TotalnoOfMeals;
@@ -50,19 +51,76 @@ const display = () => {
   console.log("data", data, flag);
   totalamount.innerHTML = `$${data}`;
   totalprice.innerHTML = `$${data}`;
+  topay.innerHTML = data;
   document.querySelector(".date").value = localStorage.getItem("delivery_date");
 };
 
 // document.querySelector("select").addEventListener("click", display);
 display();
 
+// =============> CORRECT MESSAGE CODE  <================= //
+
+const toast = document.querySelector(".theToast"),
+  closeIcon = document.querySelector(".close"),
+  progress = document.querySelector(".progress");
+
+function show_message() {
+  toast.classList.add("active");
+  progress.classList.add("active");
+
+  setTimeout(() => {
+    toast.classList.remove("active");
+  }, 4000);
+  setTimeout(() => {
+    progress.classList.remove("active");
+  }, 4300);
+}
+
+closeIcon.addEventListener("click", () => {
+  toast.classList.remove("active");
+  progress.classList.add("active");
+
+  setTimeout(() => {
+    progress.classList.remove("active");
+  }, 300);
+});
+
+// =============> WRONG MESSAGE CODE  <================= //
+
+const toastf = document.querySelector(".theToastf"),
+  closeIconf = document.querySelector(".closef"),
+  progressf = document.querySelector(".progressf");
+
+function show_messagef() {
+  toastf.classList.add("active");
+  progressf.classList.add("active");
+
+  setTimeout(() => {
+    toastf.classList.remove("active");
+  }, 4000);
+  setTimeout(() => {
+    progressf.classList.remove("active");
+  }, 4300);
+}
+
+closeIconf.addEventListener("click", () => {
+  toastf.classList.remove("active");
+  progressf.classList.add("active");
+
+  setTimeout(() => {
+    progressf.classList.remove("active");
+  }, 300);
+});
+
 const applyPromo = () => {
   event.preventDefault();
   let codeEntered = document.querySelector(".promoCode").value;
   if (codeEntered === "masai") {
     flag = true;
+    show_message();
   } else {
     flag = false;
+    show_messagef();
   }
   display();
   document.querySelector(".promoCode").value = null;
@@ -71,6 +129,7 @@ document.querySelector(".apply").addEventListener("click", applyPromo);
 
 const pay = document.querySelector(".pay");
 pay.addEventListener("click", () => {
+  document.querySelector(".drop").classList.add("bounce-in-top");
   document.querySelector(".drop").style.display = "flex";
 });
 
@@ -80,59 +139,40 @@ document.querySelector(".close_p").addEventListener("click", () => {
 
 document.querySelector(".send_otp").addEventListener("click", () => {
   alert("1234");
-  document.querySelector(".drop").style.display = "none";
-  document.querySelector(".dropon").style.display = "flex";
+  document.querySelector(".drop").classList.remove("bounce-in-top");
+  document.querySelector(".drop").classList.add("bounce-out-top");
+  document.querySelector(".dropon").classList.add("puff-in-center");
+
+  setTimeout(() => {
+    document.querySelector(".drop").style.display = "none";
+    document.querySelector(".dropon").style.display = "flex";
+  }, 1300);
 });
 document.querySelector(".verify_otp").addEventListener("click", () => {
   let otp = document.querySelector(".otp").value;
   if (otp === "1234") {
-    alert("congratulation ! Order Placed.");
-    document.querySelector(".dropon").style.display = "none";
-    otp.value = null;
+    // alert("congratulation ! Order Placed.");
+    document.querySelector(".dropon").classList.remove("puff-in-center");
+    document
+      .querySelector(".dropon")
+      .classList.add("slide-out-elliptic-top-bck");
+    setTimeout(() => {
+      document.querySelector(".dropon").style.display = "none";
+    }, 800);
+    document.querySelector(".otp").value = "";
+    document.querySelector(".tex-2").innerHTML = "Payment Successful !";
+    show_message();
   } else {
-    alert("OOP's ! You entred wrong otp, Please Try Again.");
-    otp.value = null;
+    // alert("OOP's ! You entred wrong otp, Please Try Again.");
+    show_messagef();
+    document.querySelector(".otp").value = "";
   }
 });
 
-////////////=======> APPLIYING THE POPS <=======/////////////
-
-// const pay = document.querySelector(".pay");
-// pay.addEventListener("click", () => {
-//   const model_body = document.querySelector(".modal-content");
-//   // model_body.innerHTML = "hi";
-//   // alert("hi");
-//   model_body.innerHTML = `
-//                 <div class="modal-header">
-//                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Proceed To Payment</h1>
-//                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-//                 </div>
-//                 <div class="modal-body phonepe">
-//                     <div class="my-4">
-//                         <h4><strong>
-//                                 Scan & Pay via PhonePe
-//                             </strong></h4>
-
-//                         <img src="assets/QR.jpeg" alt="">
-//                     </div>
-//                     <h4 class="or">OR</h4>
-//                     <div>
-//                         <h4><strong>
-//                                 Enter Your Mobile Number
-//                             </strong></h4>
-//                         <input type="number" placeholder="0 0 0 0 0 - 0 0 0 0 0" class="form-control my-4"
-//                             id="exampleFormControlInput1">
-//                         <button class="next send_otp btn btn-primary">Send OTP</button>
-//                     </div>
-//                 </div>
-//             `;
+// document.querySelector(".close_p").addEventListener("click", () => {
+//   document.querySelector(".dropon").classList.remove("puff-in-center");
+//   document.querySelector(".dropon").classList.add("slide-out-elliptic-top-bck");
+//   setTimeout(() => {
+//     document.querySelector(".dropon").style.display = "none";
+//   }, 800);
 // });
-
-// <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-//       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-//       <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-//           <div class="modal-content">
-// </div>
-//       </div>
-//   </div>`;

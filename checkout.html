@@ -15,17 +15,44 @@
     <link rel="stylesheet" href="styles/checkoutNav.css">
     <!-- STYLES COMMON_QUESTIONS -->
     <link rel="stylesheet" href="styles/common_questions.css">
+    <!-- STYLES FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
 </head>
 
 <body>
     <!-- IMPORTED DAY PAGE NAVBAR -->
     <nav class="navbar sticky-top navbar-expand-lg bg-white"></nav>
 
-    <!-- PAYMENT GATEWAY -->
-    <!-- Scrollable modal -->
+    <!-- PROMO ACCEPETED MESSAGE BOX -->
+    <div class="theToast sticky-top">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+            <div class="message">
+                <span class="text tex-1">Congratulation !</span>
+                <span class="text tex-2">You got a discount of $50</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="progress"></div>
+    </div>
+    <!-- PROMO REJECTED MESSAGE BOX -->
+    <div class="theToastf sticky-top">
+        <div class="toast-contentf">
+            <i class="fas fa-solid fa-exclamation checkf"></i>
+            <div class="messagef">
+                <span class="textf tex-1f">OPP's !</span>
+                <span class="textf tex-2f">Something went wrong !!</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark closef"></i>
+        <div class="progressf"></div>
+    </div>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- PAYMENT GATEWAY -->
+
+    <div class="modal bounce-in-top" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -178,8 +205,8 @@
 
     <!-- PROCEED TO PAYMENT -->
 
-    <div class="drop" style="display: none;">
-        <div class="phonepe">
+    <div class="drop modal" style="display: none;">
+        <div class="phonepe card">
             <div class="p_header">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Proceed To Payment</h1>
                 <button type="button" class="btn-close close_p" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -202,9 +229,9 @@
             </div>
         </div>
     </div>
-    <!--  -->
-    <div class="dropon" style="display: none;">
-        <div class="opt_div">
+    <!-- OTP -->
+    <div class="dropon modal" style="display: none;">
+        <div class="opt_div card">
             <div class="p_header">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Fill The OTP</h1>
                 <button type="button" class="btn-close close_p" data-bs-dismiss="modal" aria-label="Close"></button>
