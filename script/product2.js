@@ -343,6 +343,7 @@ function ShowinCart(arr,food){
             let sTotal = (pricePerMeal*cartArray.length).toFixed(2)
             let d = (12.50*cartArray.length) - (pricePerMeal*cartArray.length)
             d = d.toFixed(2)
+            localStorage.setItem("itemQuantity",cartArray.length)
             localStorage.setItem("discount",d)
             localStorage.setItem("subtotal",sTotal)
             localStorage.setItem("itemToBuy",JSON.stringify(array1))
