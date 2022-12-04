@@ -198,6 +198,7 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
   if (otp === "1234") {
     // alert("congratulation ! Order Placed.");
     document.querySelector(".opt_div").classList.remove("puff-in-center");
+    document.querySelector(".opt_div").classList.remove("wobble-hor-bottom");
     document
       .querySelector(".opt_div")
       .classList.add("slide-out-elliptic-top-bck");
@@ -209,6 +210,8 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
     show_message();
   } else {
     // alert("OOP's ! You entred wrong otp, Please Try Again.");
+    document.querySelector(".opt_div").classList.remove("puff-in-center");
+    document.querySelector(".opt_div").classList.add("wobble-hor-bottom");
     show_messagef();
     document.querySelector(".otp").value = "";
   }
