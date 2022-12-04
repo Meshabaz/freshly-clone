@@ -26,6 +26,9 @@
   <div><img src="https://www.drupal.org/files/project-images/font_awesome_logo.png" width="15px"/> FONT AWESOME</div>
   
   <br>
+   # 🚀 THE NODE SERVER LIVE AT :
+ 
+ <p><a href ="https://web-production-0322.up.railway.app/all" ><img src = "https://camo.githubusercontent.com/59cde2396da07f6c391795028e4350eb3a99c0186d55161807728d44200c6959/68747470733a2f2f6170692e6e65746c6966792e636f6d2f6170692f76312f6261646765732f62363534633934652d303861362d346237392d623434332d3738333735383162316438642f6465706c6f792d737461747573"/></a></p>
   
 # <img src="https://cdn-icons-png.flaticon.com/512/1534/1534938.png" width="25px"/> Team Members 
  
@@ -59,7 +62,20 @@
   <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/meals.png"/>
  <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/meals1.png"/>
  
- # 🔹 Plan Page
- <p>Plan Page has various plans that are Flexible for you... </p>
- <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/meals1.png"/>
+ # 🔹 Plans Page
+ <p>Plan Page has various plans according to number of meals and price per meal which are Flexible for you... </p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/plan.png"/>
+ 
+ # 🔹 Day Page
+ <p>Day Page has various options to select the starting data of your plan which is Flexible for you... </p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/days.png"/>
+ 
+  # 🔹 Checkout Page
+ <p>Checkout Page has all the necessary details like your oder summery your personal details form & common questions... </p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/checkout.png"/>
+ 
+   # 🔹 Payment Page
+ <p>Payment Page has multiple options relevent to you... </p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/pay1.png"/>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/pay2.png"/> 
  
