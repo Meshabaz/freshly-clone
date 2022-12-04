@@ -1,8 +1,7 @@
- 
- let menu =JSON.parse(localStorage.getItem ("menu")) || [];
+let menu =JSON.parse(localStorage.getItem ("menu")) || [];
 
 
- let url =`https://freshly-server.herokuapp.com/all`;
+ let url =`https://freshly-server.onrender.com/all`;
  let getData = async() =>{
     let reponse = await fetch(url);
     let data = await reponse.json();
@@ -142,3 +141,5 @@ function fetchType()
     displayData(list);
 
  }
+
+ 
