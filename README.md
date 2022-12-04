@@ -28,7 +28,7 @@
   <br>
    # 🚀 THE NODE SERVER LIVE AT :
  <br>
- <p><a href ="https://web-production-0322.up.railway.app/all" target="_blank"><img src = "https://camo.githubusercontent.com/59cde2396da07f6c391795028e4350eb3a99c0186d55161807728d44200c6959/68747470733a2f2f6170692e6e65746c6966792e636f6d2f6170692f76312f6261646765732f62363534633934652d303861362d346237392d623434332d3738333735383162316438642f6465706c6f792d737461747573"/></a></p>
+ <p><a href ="https://web-production-0322.up.railway.app/all" target="_blank"><img src = "https://logos-download.com/wp-content/uploads/2016/09/Node_logo_NodeJS.png"/></a></p>
   
 # <img src="https://cdn-icons-png.flaticon.com/512/1534/1534938.png" width="25px"/> Team Members 
  
