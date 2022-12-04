@@ -14,10 +14,10 @@ console.log(mealQuantity)
 console.log(pricePerMeal)
 console.log(date)
 
-
+let secondayUrl = `https://freshly-server.onrender.com/all`
 
 let data = async() => {
-    url = `https://freshly-server.onrender.com/all`
+    url = `https://web-production-0322.up.railway.app/all`
     let res = await fetch(url)
     let food = await res.json()
     allProducts = food
