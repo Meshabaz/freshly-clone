@@ -2,9 +2,52 @@ import { adjustSupport } from "../components/Nav.js";
 import { checkoutNav } from "../components/checkoutNav.js";
 import { cQues } from "../components/commonQuestions.js";
 
+let cartArr = JSON.parse(localStorage.getItem("cartproduct")) || [];
+let currDate = localStorage.getItem("delivery_date");
+
+let distinct = [];
+let duplicates = [];
+cartArr.forEach((item, index, object) => {
+  if (distinct.find((current) => current.id === item.id)) {
+    console.info("duplicate found");
+
+    duplicates.push(item);
+  } else {
+    distinct.push(item);
+  }
+});
+
+function showMeals() {
+  let menuTypes = document.querySelector(".mealsDetail");
+  menuTypes.innerHTML = "";
+  let text = "";
+  distinct.map((e) => {
+    text += `
+     <div class="types">
+                    <label>x
+                            <h5>
+                            <strong class="mealsCount">${e.quantity}</strong>
+                        </h5>
+                    </label>
+                        <img src=${e.pic.url2}
+                            alt="">
+                    
+                            </div>
+                    `;
+  });
+  menuTypes.innerHTML = text;
+}
+window.onload = showMeals();
+
+console.info("duplicates:", duplicates);
+console.info("distinct:", distinct);
+
 let comingDate = localStorage.getItem("delivery_date");
 let flag = false;
 let TotalnoOfMeals = localStorage.getItem("noOfMeals");
+if (TotalnoOfMeals < cartArr.length) {
+  TotalnoOfMeals = cartArr.length;
+}
 let pricePerMeal = localStorage.getItem("pricePerMeal");
 
 document.querySelector(".navbar").innerHTML = checkoutNav();
@@ -34,25 +77,27 @@ document.querySelector(".date").addEventListener("click", () => {
 });
 
 const display = () => {
-  let shippingCharge = document.querySelector(".shippingAmount").innerText;
+  // console.log("crt len:", cartArr.length);
+
+  let shippingCharge = document.querySelector(".shippingAmount");
   let totalamount = document.querySelector(".totalAmount");
   let totalprice = document.querySelector(".totalPrice");
   let topay = document.querySelector(".topay");
 
-  document.querySelector(".mealsCount").innerText = TotalnoOfMeals;
+  shippingCharge.innerHTML = `$ 9.99`;
+  // document.querySelector(".mealsCount").innerText = TotalnoOfMeals;
   document.querySelector(".meals").innerText = TotalnoOfMeals;
-  document.querySelector(".noOfMealsAmount").innerText = `$${pricePerMeal}-/`;
-  let data =
-    parseFloat(TotalnoOfMeals) * parseFloat(pricePerMeal) +
-    parseFloat(shippingCharge);
+  document.querySelector(".noOfMealsAmount").innerText = `$ ${pricePerMeal}`;
+  let data = parseFloat(TotalnoOfMeals) * parseFloat(pricePerMeal) + 9.99;
   data = flag ? data - 50 : data;
   // data = Math.round(data, 2);
   data = Number(data.toFixed(2));
   console.log("data", data, flag);
-  totalamount.innerHTML = `$${data}`;
-  totalprice.innerHTML = `$${data}`;
+  totalamount.innerHTML = `$ ${data}`;
+  totalprice.innerHTML = `$ ${data}`;
   topay.innerHTML = data;
-  document.querySelector(".date").value = localStorage.getItem("delivery_date");
+  document.querySelector(".date").value = currDate;
+  console.log("date:", currDate);
 };
 
 // document.querySelector("select").addEventListener("click", display);
@@ -129,7 +174,7 @@ document.querySelector(".apply").addEventListener("click", applyPromo);
 
 const pay = document.querySelector(".pay");
 pay.addEventListener("click", () => {
-  document.querySelector(".drop").classList.add("bounce-in-top");
+  document.querySelector(".phonepe").classList.add("bounce-in-top");
   document.querySelector(".drop").style.display = "flex";
 });
 
@@ -139,9 +184,9 @@ document.querySelector(".close_p").addEventListener("click", () => {
 
 document.querySelector(".send_otp").addEventListener("click", () => {
   alert("1234");
-  document.querySelector(".drop").classList.remove("bounce-in-top");
-  document.querySelector(".drop").classList.add("bounce-out-top");
-  document.querySelector(".dropon").classList.add("puff-in-center");
+  document.querySelector(".phonepe").classList.remove("bounce-in-top");
+  document.querySelector(".phonepe").classList.add("bounce-out-top");
+  document.querySelector(".opt_div").classList.add("puff-in-center");
 
   setTimeout(() => {
     document.querySelector(".drop").style.display = "none";
@@ -152,9 +197,9 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
   let otp = document.querySelector(".otp").value;
   if (otp === "1234") {
     // alert("congratulation ! Order Placed.");
-    document.querySelector(".dropon").classList.remove("puff-in-center");
+    document.querySelector(".opt_div").classList.remove("puff-in-center");
     document
-      .querySelector(".dropon")
+      .querySelector(".opt_div")
       .classList.add("slide-out-elliptic-top-bck");
     setTimeout(() => {
       document.querySelector(".dropon").style.display = "none";

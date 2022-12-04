@@ -105,16 +105,25 @@ label,
 }
 .mealsDetail {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.types {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  gap: 2rem;
+  border-bottom: 2px solid lightgray;
 }
 
-.mealsDetail img {
+.mealsDetail .types img {
   width: 6rem;
   border-radius: 50%;
 }
-.mealsDetail label {
+.mealsDetail .types label {
   display: flex;
   flex-direction: row;
   gap: 3px;
