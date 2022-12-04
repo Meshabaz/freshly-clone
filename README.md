@@ -39,3 +39,27 @@
  
  <br>
  
+ # 🔹 Landing Page 
+ <p>The Homepage of Freshly has various features like login / signup and navigation for menu & plans that we offer...</p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/landing.png"/>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/landing1.png"/>
+ 
+ # 🔹 Login / SignUp 
+ <p>The Login and signup page is Validated. User can easily login and signup to buy any plan or meal...</p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/login.png"/>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/signup.png"/>
+ 
+ # 🔹 Menu Page
+ <p>Menu Page has various features like filter the meals by category wise...</p>
+  <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/menu1.png"/>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/the_pro_code/assets/menu2.png"/>
+ 
+ # 🔹 Meals & Filter Page
+ <p>Meals & Filter Page has various features to filter by category wise, ...</p>
+  <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/meals.png"/>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/meals1.png"/>
+ 
+ # 🔹 Plan Page
+ <p>Plan Page has various plans that are Flexible for you... </p>
+ <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/meals1.png"/>
+ 
