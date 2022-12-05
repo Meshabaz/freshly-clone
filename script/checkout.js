@@ -223,7 +223,7 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
     show_message();
     setTimeout(() => {
       document.querySelector(".loading_status").style.display = "none";
-      location.href = "../index.html";
+      location.href = "index.html";
     }, 6000);
   } else {
     // alert("OOP's ! You entred wrong otp, Please Try Again.");

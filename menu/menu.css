@@ -41,6 +41,10 @@ nav > div {
 
   /* background-color: whitesmoke; */
 }
+.first_side {
+  display: flex;
+  justify-content: left;
+}
 
 nav img {
   width: 110px;

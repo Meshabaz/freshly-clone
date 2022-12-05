@@ -212,7 +212,7 @@ function ShowinCart(arr,food){
     console.log(arr)
     if(arr.length ===0){
         let disc = document.createElement("h5")
-        disc.innerText = `Get Started by Adding atleast 4 Meals`
+        disc.innerText = `Get Started by Adding atleast ${mealQuantity} Meals`
         disc.style.color = "gray"
         disc.style.textAlign = "center"
         disc.style.marginTop = "180px"

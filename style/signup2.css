@@ -2,19 +2,6 @@ body {
   font-family: FavoritFreshly, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 500;
   background: rgb(255, 253, 247);
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(transparent, #f09ede);
-  border-radius: 6px;
-  cursor: pointer;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(transparent, #00c6ff);
-  border-radius: 6px;
 }
 #headnavbar {
   display: flex;
@@ -28,24 +15,24 @@ body {
   text-decoration: none;
 }
 
-#inputBox {
+#inputBox{
   display: grid;
   width: 30%;
   margin: auto;
 }
-#inputBox label,
-input {
-  text-align: left;
+#inputBox label, input{
+text-align: left;
 }
-input {
+input{
   padding: 8px;
   margin-top: 6px;
   border-radius: 4px;
+  outline-style: none;
 }
 /* label{
   padding-left: 8px;
 } */
-button {
+button{
   padding: 10px;
   color: white;
   border: none;
@@ -54,7 +41,7 @@ button {
   font-size: 15px;
   background-color: rgb(25, 25, 253);
 }
-button:hover {
+button:hover{
   background-color: blue;
 }
 #firstul li {
@@ -107,6 +94,7 @@ button:hover {
   display: flex;
   font-family: FavoritFreshly;
   margin-left: 170%;
+  align-items: center;
 }
 
 #head_img {
@@ -122,7 +110,7 @@ button:hover {
   text-align: center;
   margin: auto;
 }
-.login {
+/* .login {
   font-family: FavoritFreshly, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 600;
   margin-top: -5%;
@@ -205,10 +193,8 @@ form {
   background: rgb(255, 253, 247);
   margin-left: 30%;
   margin-top: -20px;
-}
-.anchor {
-  display: flex;
-}
+} */
+
 #forget-passward {
   margin-left: 30px;
 }
