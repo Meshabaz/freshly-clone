@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshly-login</title>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+
+<body>
+    <!--creating header-->
+
+    <div class="mainheader">
+
+        <header class="childheader">
+            <a href="index.html">
+                <img id="fimg"
+                    src="data:image/png;base64,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">
+            </a>
+            <ul>
+                <li>Plans ></li>
+                <li>Day ></li>
+                <li>Meals ></li>
+                <li>Checkout</li>
+            </ul>
+            <svg id="viewbox" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                <g fill="none" fill-rule="evenodd" transform="translate(1 .144)">
+                    <circle cx="9.5" cy="10.356" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
+                    <path
+                        d="M9.296 15.896a1.28 1.28 0 0 1-.86-.32c-.255-.221-.39-.54-.39-.919 0-.344.124-.64.366-.877.48-.47 1.284-.473 1.759.002.237.237.357.532.357.875 0 .38-.13.687-.383.913a1.25 1.25 0 0 1-.849.326m-.065-3.299c-.294 0-.556-.104-.76-.299-.21-.202-.317-.489-.317-.85 0-1.148.69-1.777 1.36-2.384.166-.153.335-.307.496-.472.324-.332.383-.727.158-1.057-.205-.299-.64-.505-1.151-.289-.437.186-.65.592-.895 1.063l-.056.106c-.212.402-.568.677-.93.718-.304.038-.589-.09-.812-.347a1.306 1.306 0 0 1-.3-.67C5.809 6.698 7.098 5.453 8.437 5.18c1.12-.23 2.345.033 3.188.685.501.389.853.92.988 1.498a2.22 2.22 0 0 1-.233 1.611c-.256.46-.643.83-1.018 1.188-.5.478-.972.928-1.082 1.533-.105.574-.488.903-1.049.903"
+                        fill="currentColor"></path>
+                </g>
+            </svg>
+            <h3 id="customer">Customer Support</h3>
+        </header>
+    </div>
+    <!--input form-->
+    <div class="inputform">
+        <h1 id="log">Log In</h1>
+
+        <form>
+            <img id="fresh"
+                src="data:image/png;base64,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">
+
+            <h1 class="dinner-ready">Dinner’s ready!</h1>
+            <h4 class="chef-prepared">Chef-prepared, healthy meals delivered weekly</h4>
+
+            <div class="inputs">
+                <input type="email" placeholder="Email" id="email">
+
+                <input type="password" placeholder="Passward" id="password">
+
+                <a href="plan.html"><button class="signup" id="subtn">Log in</button></a>
+            </div>
+            <h4 id="htagone">Dont have an account?<a href="signup2.html">signup</a></h4>
+            <h4 id="htagtwo">By continuing, you agree to our <a href="https://www.freshly.com/terms">Terms</a>and <a
+                    href="https://about.freshly.com/privacy">Privacy Policy</a>
+                & will receive emails from Freshly.</h4>
+
+        </form>
+    </div>
+    <footer>
+        <div id="container">
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg"
+                    alt="">
+                <p>&copy;Freshly inc.</p>
+            </div>
+            <div>
+                <a href="" class="top">Company</a>
+                <a href="">Careers</a>
+                <a href="">Contact us</a>
+                <a href="">Press</a>
+                <a href="">Terms</a>
+                <a href="">Privacy</a>
+                <a href="">Affilates</a>
+                <a href="">Partnerships</a>
+            </div>
+            <div>
+                <a href="" class="top">Learn More</a>
+                <a href="">Plans & Menu</a>
+                <a href="">Why Freshly?</a>
+                <a href="">Gifts</a>
+                <a href="">FAQs</a>
+                <a href="">Blog</a>
+                <a href="">Students</a>
+            </div>
+            <div>
+                <a href="" class="top">Join Us</a>
+                <div>
+                    <a href="https://www.facebook.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bbc67c09879c5a19b_5d795c37fedbb6017d824b02_icons8-facebook-old-30.jpg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/freshly/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423ad92101de48f410c7_5d10dfc0ef515f74b875a42c_icons8-instagram-50.jpg"
+                            alt=""></a>
+                    <a href="https://twitter.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bd050163202b341e8_5d10dfc00442bfc99d3d6828_icons8-twitter-filled-50.jpg"
+                            alt=""></a>
+                    <a href="https://www.pinterest.com/FreshlyEats/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423a6b26e039d505425e_5d10dfbfef515faad975a42b_icons8-pinterest-filled-50.jpg"
+                            alt=""></a>
+                </div>
+                <a href="https://apps.apple.com/app/apple-store/id1195648107"><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d6439d4fb92e7630e46976b_Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                        alt=""></a>
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.freshly.meal&utm_source=website&utm_campaign=footer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d643dd558306bfe1df5ef8b_google-play-badge-p-500.png"
+                        alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+
+<script src="./script/login.js"></script>
+
+
+<!--
+    let inputform=()=>{
+    
+    return `
+   <header class="childheader">
+   <a href="login.html">
+    <img id="fimg" src="data:image/png;base64,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">
+</a>
+<ul>
+    /<li>Plans ></li>
+    <li>Day ></li>
+    <li>Meals ></li>
+   <li>Checkout</li>
+</ul>
+<svg id="viewbox" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(1 .144)"><circle cx="9.5" cy="10.356" r="9.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M9.296 15.896a1.28 1.28 0 0 1-.86-.32c-.255-.221-.39-.54-.39-.919 0-.344.124-.64.366-.877.48-.47 1.284-.473 1.759.002.237.237.357.532.357.875 0 .38-.13.687-.383.913a1.25 1.25 0 0 1-.849.326m-.065-3.299c-.294 0-.556-.104-.76-.299-.21-.202-.317-.489-.317-.85 0-1.148.69-1.777 1.36-2.384.166-.153.335-.307.496-.472.324-.332.383-.727.158-1.057-.205-.299-.64-.505-1.151-.289-.437.186-.65.592-.895 1.063l-.056.106c-.212.402-.568.677-.93.718-.304.038-.589-.09-.812-.347a1.306 1.306 0 0 1-.3-.67C5.809 6.698 7.098 5.453 8.437 5.18c1.12-.23 2.345.033 3.188.685.501.389.853.92.988 1.498a2.22 2.22 0 0 1-.233 1.611c-.256.46-.643.83-1.018 1.188-.5.478-.972.928-1.082 1.533-.105.574-.488.903-1.049.903" fill="currentColor"></path></g></svg>
+<h3 id="customer">Customer Support</h3>
+</header>
+    
+      `
+    
+}
+
+
+export default inputform;
+-->

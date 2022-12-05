@@ -186,7 +186,7 @@ document.querySelector(".send_otp").addEventListener("click", () => {
   alert("1234");
   document.querySelector(".phonepe").classList.remove("bounce-in-top");
   document.querySelector(".phonepe").classList.add("bounce-out-top");
-  document.querySelector(".opt_div").classList.add("puff-in-center");
+  document.querySelector(".opt_div").classList.add("bounce-in-bck");
 
   setTimeout(() => {
     document.querySelector(".drop").style.display = "none";
@@ -197,7 +197,17 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
   let otp = document.querySelector(".otp").value;
   if (otp === "1234") {
     // alert("congratulation ! Order Placed.");
-    document.querySelector(".opt_div").classList.remove("puff-in-center");
+    document.querySelector(".first_name").value = null;
+    document.querySelector(".second_name").value = null;
+    document.querySelector(".full_name").value = null;
+
+    document.querySelector(".addr").value = null;
+    document.querySelector(".city").value = null;
+    document.querySelector(".state").value = null;
+    document.querySelector(".zip").value = null;
+    document.querySelector(".chk").value = null;
+    document.querySelector(".email").value = null;
+    document.querySelector(".opt_div").classList.remove("bounce-in-bck");
     document.querySelector(".opt_div").classList.remove("wobble-hor-bottom");
     document
       .querySelector(".opt_div")
@@ -205,12 +215,19 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
     setTimeout(() => {
       document.querySelector(".dropon").style.display = "none";
     }, 800);
+    setTimeout(() => {
+      document.querySelector(".loading_status").style.display = "flex";
+    }, 4000);
     document.querySelector(".otp").value = "";
-    document.querySelector(".tex-2").innerHTML = "Payment Successful !";
+    document.querySelector(".tex-2").innerHTML = "Payment Successful !!";
     show_message();
+    setTimeout(() => {
+      document.querySelector(".loading_status").style.display = "none";
+      location.href = "../index.html";
+    }, 6000);
   } else {
     // alert("OOP's ! You entred wrong otp, Please Try Again.");
-    document.querySelector(".opt_div").classList.remove("puff-in-center");
+    document.querySelector(".opt_div").classList.remove("bounce-in-bck");
     document.querySelector(".opt_div").classList.add("wobble-hor-bottom");
     show_messagef();
     document.querySelector(".otp").value = "";
@@ -218,7 +235,7 @@ document.querySelector(".verify_otp").addEventListener("click", () => {
 });
 
 // document.querySelector(".close_p").addEventListener("click", () => {
-//   document.querySelector(".dropon").classList.remove("puff-in-center");
+//   document.querySelector(".dropon").classList.remove("bounce-in-bck");
 //   document.querySelector(".dropon").classList.add("slide-out-elliptic-top-bck");
 //   setTimeout(() => {
 //     document.querySelector(".dropon").style.display = "none";

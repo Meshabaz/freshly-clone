@@ -14,10 +14,10 @@ console.log(mealQuantity)
 console.log(pricePerMeal)
 console.log(date)
 
-
+let secondayUrl = `https://freshly-server.onrender.com/all`
 
 let data = async() => {
-    url = `https://freshly-server.onrender.com/all`
+    url = `https://web-production-0322.up.railway.app/all`
     let res = await fetch(url)
     let food = await res.json()
     allProducts = food
@@ -297,6 +297,7 @@ function ShowinCart(arr,food){
     
     document.getElementById("subtotal").innerHTML = ""
     document.getElementById("cart-quantity").innerHTML = ""
+    
     document.getElementById("addToCart").innerHTML = ""
     let sub = document.getElementById("subtotal")
     let h3 = document.createElement("h3")
@@ -323,16 +324,19 @@ function ShowinCart(arr,food){
 
     let quan = document.createElement("h3")
     quan.innerText = cartArray.length
+    quan.style.color = "red"
 
     document.getElementById("cart-quantity").append(cIcon,quan)
-
+    let remainingQ = mealQuantity-cartArray.length
     var add = document.createElement("button")
-    add.innerText = "Add to Continue"
+    add.innerText = "Add " + remainingQ + " to Continue"
     if(cartArray.length>=mealQuantity){
+        add.innerText = "Next"
         add.style.background = "blue"
         add.style.color = "white"
         add.style.cursor = "pointer"
         add.addEventListener("click",()=>{
+            
             let array1 = []
             allProducts.map((elem)=>{
                 if(elem.quantity>0){
@@ -556,65 +560,3 @@ function filter10(){
     })
     display(arr1)
 }
-
-//Implementation of Modal Box
-
-// function displayModel(elem){
-//     let div = document.getElementById("inner-container");
-//             div.innerHTML = `<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-//             <div class="modal-dialog" role="document">
-//               <div class="modal-content">
-//                 <div class="modal-header">
-                  
-//                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//                     <span aria-hidden="true">&times;</span>
-//                   </button>
-//                 </div>
-//                 <div id="modal-body">
-                    
-
-//                 </div>
-                
-//               </div>
-//             </div>
-//           </div>`;
-          
-          
-//             let {pic:{url1},pic:{url2},brand,diet:{gluten},inside:{calories,carbs,total_fat,protien}} = elem;
-//             document.getElementById("modal-body").innerHTML = null;
-//             let dialog_box = document.createElement("div");
-//             dialog_box.setAttribute("id","Modalbox");
-//             let h1 = document.createElement("h1");
-//                 h1.innerText =brand;
-                
-//                 let h3 = document.createElement("h3");
-//                 h3.innerText = elem.with;
-//                 let h6 = document.createElement("h6");
-//                 h6.innerText = gluten;
-//                 h6.style.color="green;"
-//                 let divimg = document.createElement("div");
-//                 divimg.setAttribute("id","ModalImg");
-                
-                
-//                 let imga = document.createElement("img");
-//                 imga.src=url1;
-//                 let imgb = document.createElement("img");
-//                 imgb.src=url2;
-
-//                 let divInside = document.createElement("div");
-//                 divInside.setAttribute("id","Modaldetails")
-//                 let p1 = document.createElement("p");
-//                 p1.innerText="Carbs :"+carbs+" | ";
-//                 let p2 = document.createElement("p");
-//                 p2.innerText="Calories :"+calories+" | ";
-//                 let p3 = document.createElement("p");
-//                 p3.innerText="Total Fat :"+total_fat+" | ";
-//                 let p4 = document.createElement("p");
-//                 p4.innerText="Protein :"+protien;
-
-                
-//                 divInside.append(p1,p2,p3,p4);
-//                 divimg.append(imga,imgb)
-//                 dialog_box.append(h1,h3,h6,divimg,divInside);
-//                 document.getElementById("modal-body").append(dialog_box);
-// }
