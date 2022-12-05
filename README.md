@@ -26,9 +26,11 @@
   <div><img src="https://www.drupal.org/files/project-images/font_awesome_logo.png" width="15px"/> FONT AWESOME</div>
   
   <br>
-   # 🚀 THE NODE SERVER LIVE AT :
- <br>
+    # 🚀 THE WEBSITE IS LIVE AT :
  <p><a href ="https://web-production-0322.up.railway.app/all" target="_blank"><img width="80px" src = "https://logos-download.com/wp-content/uploads/2016/09/Node_logo_NodeJS.png"/></a></p>
+   # 🚀 THE NODE SERVER IS LIVE AT :
+ <br>
+ <p><a href ="https://meshabaz.github.io/freshly-clone/" target="_blank"><img width="80px" src = "https://tse3.mm.bing.net/th?id=OIP.ckeUFk-yid0vfWnd56w7wAHaHa&pid=Api&P=0"/></a></p>
   
 # <img src="https://cdn-icons-png.flaticon.com/512/1534/1534938.png" width="25px"/> Team Members 
  
