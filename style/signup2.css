@@ -4,6 +4,18 @@ body {
   background: rgb(255, 253, 247);
   overflow-x: hidden;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #f09ede);
+  border-radius: 6px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00c6ff);
+  border-radius: 6px;
+}
 #headnavbar {
   display: flex;
   margin-top: 20px;
