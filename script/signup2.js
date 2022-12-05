@@ -38,36 +38,44 @@ function getData()
     */
     var username =localStorage.getItem("email") || "";
     // var password =localStorage.getItem("password")||"";
-    let form=document.querySelector("form");
-    form.addEventListener("submit" ,getData)
+    let form=document.querySelector("#login-btn1");
+    form.addEventListener("click" ,getData)
     function getData()
     {
-        let obj={
-            username:form.username.value,
-            phonenumber:form.phonenumber.value,
-            emailinput:form.emailinput.value,
-            // mobile:form.email.value,
-            zipcode:form.zipcode.value,
-            emailinput:form.emailinput.value,
-            passward:form.passward.value,
-    
-        }
-        if(obj.email==username){
-            alert("You have already registered from this email, Please Login");
-            window.location.href="./login.html";
-            window.Location.href="./login.html";
+        if(document.getElementById("username1").value== "" ||
+        document.getElementById("phonenumber1").value == "" ||
+        document.getElementById("emailinput1").value == "" ||
+        document.getElementById("zipcode1").value == "" ||
+        document.getElementById("password1").value == ""){
+            alert("Input Field can not be Empty")
         }
         else{
-            localStorage.setItem("phnumber",obj.phonenumber);
-            localStorage.setItem("zipcode",obj.zipcode);
-             localStorage.setItem("email",obj.emailinput);
-            localStorage.setItem("password",obj.passward);
-            localStorage.setItem("name",obj.username);
-            // localStorage.setItem("mobile",obj.mobile);
-            window.location.href="./login.html";
-            alert("Successfully Registered");
-            
+            let obj={
+                username:document.getElementById("username1").value,
+                phonenumber:document.getElementById("phonenumber1").value,
+                emailinput:document.getElementById("emailinput1").value,
+                zipcode:document.getElementById("zipcode1").value,
+                passward:document.getElementById("password1").value,
+        
+            }
+            if(obj.email==username){
+                alert("You have already registered from this email, Please Login");
+                window.location.href="./login.html";
+                window.Location.href="./login.html";
+            }
+            else{
+                localStorage.setItem("phnumber",obj.phonenumber);
+                localStorage.setItem("zipcode",obj.zipcode);
+                 localStorage.setItem("email",obj.emailinput);
+                localStorage.setItem("password",obj.passward);
+                localStorage.setItem("name",obj.username);
+                // localStorage.setItem("mobile",obj.mobile);
+                window.location.href="./login.html";
+                alert("Successfully Registered");
+                
+            }
         }
+        
       
      
     }

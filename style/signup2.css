@@ -15,6 +15,36 @@ body {
   text-decoration: none;
 }
 
+
+
+#inputBox{
+  display: grid;
+  width: 30%;
+  margin: auto;
+}
+#inputBox label, input{
+text-align: left;
+}
+input{
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 4px;
+}
+/* label{
+  padding-left: 8px;
+} */
+button{
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: rgb(25, 25, 253);
+}
+button:hover{
+  background-color: blue;
+}
 #firstul li {
   cursor: pointer;
 }
@@ -75,10 +105,10 @@ body {
 #inputform {
   text-align: center !important;
 }
-#anchor {
-  display: flex;
-  margin-left: 37%;
-  gap: 50px;
+.anchor {
+  width: 30%;
+  text-align: center;
+  margin: auto;
 }
 .login {
   font-family: FavoritFreshly, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -170,9 +200,9 @@ form {
 #forget-passward {
   margin-left: 30px;
 }
-#dont-have-an-account {
+/* #dont-have-an-account {
   margin-left: 29%;
-}
+} */
 #small {
   width: 100px;
   height: 20px;
@@ -180,9 +210,9 @@ form {
 #hrtwo {
   margin-top: 100px;
 }
-#dont-have-an-account {
+/* #dont-have-an-account {
   margin-top: 30px;
-}
+} */
 #learn-more ul li {
   color: black;
 }

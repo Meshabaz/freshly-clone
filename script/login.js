@@ -30,7 +30,7 @@ function getdata()
     localStorage.setItem("username",obj.username);
  
 }*/
-console.log("vk");
+// console.log("vk");
 let form = document.querySelector(".signup");
 form.addEventListener("click", () => {
   event.preventDefault();
@@ -39,15 +39,17 @@ form.addEventListener("click", () => {
     password1: document.querySelector("#password").value,
   };
   console.log(obj);
-
+  // console.log(localStorage.getItem("email"))
+  // console.log(document.querySelector("#email").value)
+  
   if (
-    localStorage.getItem("email") == obj.name1 &&
-    localStorage.getItem("password") == obj.password1
+    localStorage.getItem("email") === obj.name1 &&
+    localStorage.getItem("password") === obj.password1
   ) {
+    alert("you logged in successfully");
     location.href = "plan.html";
     // location.href = "";
-
-    alert("you logged in successfully");
+    
   } else {
     alert("creditional wrong, please try again!");
   }
