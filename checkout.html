@@ -246,6 +246,35 @@
             </div>
         </div>
     </div>
+    <!-- POP-UP LOADING -->
+    <div class="loading_status modal" style="display: none;">
+
+        <div class="loadingdiv">
+            <img class="loading" src="assets/loading.svg" alt="">
+            <h2>Payment Successful Continue to explore...!!</h2>
+        </div>
+
+    </div>
+    <style>
+        .loading_status {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading_status .loadingdiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
     <!-- DAY PAGE CONTENT -->
     <div class="main">
         <div class="container first">
@@ -256,21 +285,21 @@
                     <div class="name">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                            <input type="text" class="form-control first_name" id="exampleFormControlInput1">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                            <label for="exampleFormControlInput1" class="form-label ">Last Name</label>
+                            <input type="text" class="form-control second_name" id="exampleFormControlInput1">
                         </div>
 
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Full Name for Delivery Address</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                        <input type="text" class="form-control full_name" id="exampleFormControlInput1">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Address Line 1</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                        <input type="text" class="form-control addr" id="exampleFormControlInput1">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Address Line 2 (optional)</label>
@@ -279,11 +308,11 @@
                     <div class="name">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">City</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                            <input type="text" class="form-control city" id="exampleFormControlInput1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">State</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select state" aria-label="Default select example">
                                 <option selected>-----</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -319,7 +348,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Zip</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1">
+                            <input type="number" class="form-control zip" id="exampleFormControlInput1">
                         </div>
                     </div>
                     <div class="mb-3">
@@ -328,14 +357,14 @@
                     </div>
                     <div class="mb-3">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
+                        <label class="form-check-label chk" for="flexCheckDefault">
                             Receive SMS text message updates on my orders
                         </label>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Email (We require your email to send
                             you receipts and order updates)</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <input type="email" class="form-control email" id="exampleFormControlInput1">
                     </div>
                     <hr>
                     <div class="mb-3">
