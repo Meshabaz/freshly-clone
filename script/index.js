@@ -14,6 +14,7 @@ function submitData(event) {
     }
     userData.push(obj);
     localStorage.setItem("UserData", JSON.stringify(userData))
+    window.location.href="./signup2.html"
     alert("Order Can be deliver to your Location");
 }
 
