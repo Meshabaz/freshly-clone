@@ -70,11 +70,11 @@ cancelPromo.addEventListener("click", () => {
   document.querySelector(".promoDiv").style.display = "none";
 });
 
-document.querySelector(".date").addEventListener("click", () => {
-  let date = document.querySelector(".date").value;
-  console.log(date);
-  localStorage.setItem("delivery_date", date);
-});
+// document.querySelector(".date").addEventListener("click", () => {
+//   let date = document.querySelector(".date").value;
+//   console.log(date);
+//   localStorage.setItem("delivery_date", date);
+// });
 
 const display = () => {
   // console.log("crt len:", cartArr.length);
@@ -96,8 +96,12 @@ const display = () => {
   totalamount.innerHTML = `$ ${data}`;
   totalprice.innerHTML = `$ ${data}`;
   topay.innerHTML = data;
-  document.querySelector(".date").value = currDate;
-  console.log("date:", currDate);
+  if (currDate) {
+    document.querySelector(".date").innerHTML = currDate;
+    console.log("date:", currDate);
+  } else {
+    document.querySelector(".date").innerHTML = "Sunday, Dec 4";
+  }
 };
 
 // document.querySelector("select").addEventListener("click", display);
