@@ -15,8 +15,6 @@ body {
   text-decoration: none;
 }
 
-
-
 #inputBox{
   display: grid;
   width: 30%;
@@ -29,6 +27,7 @@ input{
   padding: 8px;
   margin-top: 6px;
   border-radius: 4px;
+  outline-style: none;
 }
 /* label{
   padding-left: 8px;
@@ -95,6 +94,7 @@ button:hover{
   display: flex;
   font-family: FavoritFreshly;
   margin-left: 170%;
+  align-items: center;
 }
 
 #head_img {
@@ -110,7 +110,7 @@ button:hover{
   text-align: center;
   margin: auto;
 }
-.login {
+/* .login {
   font-family: FavoritFreshly, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 600;
   margin-top: -5%;
@@ -193,10 +193,8 @@ form {
   background: rgb(255, 253, 247);
   margin-left: 30%;
   margin-top: -20px;
-}
-.anchor {
-  display: flex;
-}
+} */
+
 #forget-passward {
   margin-left: 30px;
 }
