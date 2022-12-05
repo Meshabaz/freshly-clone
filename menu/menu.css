@@ -1,5 +1,16 @@
 /* NAVBAR SECTION  */
-
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #f09ede);
+  border-radius: 6px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00c6ff);
+  border-radius: 6px;
+}
 nav {
   /* height: 65px; */
   margin-bottom: 10px;
@@ -29,6 +40,10 @@ nav > div {
   justify-content: space-between;
 
   /* background-color: whitesmoke; */
+}
+.first_side {
+  display: flex;
+  justify-content: left;
 }
 
 nav img {
