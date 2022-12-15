@@ -1,4 +1,4 @@
-# <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/Freshly__Logo.jpg?raw=true" width="120px"/> -clone
+# <img src="https://github.com/Meshabaz/freshly-clone/blob/master/assets/Freshly__Logo.jpg" width="120px"/> -clone
 
 <p>With Freshly, you’ll enjoy the convenience of nutritious, prepared meals delivered right to your door. We’ve done the planning, prepping, and cooking, so all you have to do is heat your meal, savor every flavor, and decompress from the day. Thoughtful Ingredients; Effortless Nutrition. We believe better eating should be easy for everyone.</p>
 
